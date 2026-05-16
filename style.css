@@ -1,0 +1,173 @@
+/* RESET DEFAULT STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #060709;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR STYLE */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: rgba(6, 7, 9, 0.9);
+    border-bottom: 1px solid #161920;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo span { color: #e60000; }
+.logo:hover { text-shadow: 0 0 15px #e60000; transform: scale(1.02); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 20px; }
+nav ul li a {
+    text-decoration: none;
+    color: #858c9c;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover, nav ul li a.active { color: #ffffff; }
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e60000;
+    transition: 0.3s ease;
+}
+nav ul li a:hover::after, nav ul li a.active::after { width: 100%; }
+
+.cart-icon { font-size: 22px; cursor: pointer; position: relative; transition: 0.3s ease; }
+.cart-icon:hover { transform: scale(1.15); }
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #e60000;
+    color: white;
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(230,0,0,0.5);
+}
+
+/* HERO BANNER SECTION SHOWROOM */
+.hero {
+    height: 45vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(6, 7, 9, 1)), 
+                url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 52px; font-weight: 800; letter-spacing: 5px; margin-bottom: 12px; color: #ffffff; text-transform: uppercase; }
+.hero-content p { color: #858c9c; max-width: 700px; margin: 0 auto 25px auto; font-size: 14px; line-height: 1.6; }
+.btn-explore {
+    padding: 13px 45px; background: transparent; border: 2px solid #e60000; color: #e60000;
+    font-weight: 600; cursor: pointer; border-radius: 4px; transition: 0.4s ease; text-transform: uppercase; letter-spacing: 1px;
+}
+.btn-explore:hover { background: #e60000; color: #ffffff; box-shadow: 0 0 30px rgba(230, 0, 0, 0.4); transform: translateY(-2px); }
+
+/* CONTAINER & GRID LAYOUT */
+.container { padding: 10px 8% 60px 8%; min-height: 50vh; }
+.page-section { animation: smoothFade 0.6s ease-in-out; }
+@keyframes smoothFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.brand-title { font-size: 24px; font-weight: 800; margin: 40px 0 25px 0; letter-spacing: 3px; border-left: 4px solid; padding-left: 15px; text-transform: uppercase; }
+.mclaren-color { border-color: #ff8700; color: #ff8700; } 
+.ferrari-color { border-color: #e60000; color: #e60000; } 
+.sale-color { border-color: #ffcc00; color: #ffcc00; }
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; }
+
+/* KARTU SHOWROOM PREMIUM */
+.product-card {
+    background: #111317; border-radius: 12px; overflow: hidden; position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); border: 1px solid #1f232c;
+}
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8); }
+.mclaren-card:hover { border-color: #ff8700; }
+.ferrari-card:hover { border-color: #e60000; }
+
+.badge-status { position: absolute; top: 15px; left: 15px; padding: 5px 12px; border-radius: 4px; font-size: 10px; font-weight: 600; z-index: 10; text-transform: uppercase; letter-spacing: 1px; }
+.dynamic-badge { background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; }
+.sale-badge { background: #ffcc00; color: #000; font-weight: 800; }
+
+/* PANEL GAMBAR MOBIL SUPER SINKRON */
+.img-box {
+    width: 100%; height: 220px; overflow: hidden; display: flex; justify-content: center; align-items: center; background: #090a0d;
+}
+.img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.product-card:hover .img-box img { transform: scale(1.08) translateY(-2px); }
+
+/* Background Glow Tint saat memuat gambar supercar */
+.orange-tint { background: #1c130b; }
+.dark-tint { background: #0b0c0e; }
+.silver-tint { background: #15171a; }
+.red-tint { background: #220b0b; }
+.red-dark-tint { background: #1a0808; }
+.blue-dark-tint { background: #0b111a; }
+.orange-dark-tint { background: #1f140a; }
+
+.details { padding: 25px; }
+.details h3 { font-size: 19px; font-weight: 600; margin-bottom: 6px; color: #ffffff; letter-spacing: 0.5px; }
+.category { font-size: 12px; color: #727a8a; margin-bottom: 22px; }
+.category del { color: #e60000; margin-right: 6px; }
+
+.price-row { display: flex; justify-content: space-between; align-items: center; }
+.price { font-size: 16px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px; }
+.sale-price { color: #00ffcc; }
+
+.btn-buy { padding: 11px 24px; background: #ffffff; color: #060709; border: none; font-weight: 600; border-radius: 4px; cursor: pointer; transition: 0.3s ease; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
+.product-card:hover .btn-buy { background: #ffffff; color: #060709; }
+
+/* Efek Tombol Dinamis Sesuai Brand Saat Di-hover */
+.mclaren-card:hover .btn-buy { background: #ff8700; color: #fff; box-shadow: 0 0 15px rgba(255,135,0,0.4); }
+.ferrari-card:hover .btn-buy { background: #e60000; color: #fff; box-shadow: 0 0 15px rgba(230,0,0,0.4); }
+.btn-buy:active { transform: scale(0.95); }
+
+/* FOOTER */
+footer { background: #040405; text-align: center; padding: 40px 20px; border-top: 1px solid #111317; font-size: 12px; color: #4a505c; letter-spacing: 0.5px; }
+.footer-links { margin-top: 12px; }
+.footer-links span { cursor: pointer; margin: 0 10px; transition: 0.3s; }
+.footer-links span:hover { color: #ffffff; }
+
+@media (max-width: 768px) {
+    .navbar { padding: 20px 5%; }
+    nav { display: none; }
+    .hero-content h1 { font-size: 30px; letter-spacing: 3px; }
+    .container { padding: 20px 5%; }
+}

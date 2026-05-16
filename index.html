@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBVelocity</title>
+    <!-- Menghubungkan ke file CSS external -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Menggunakan Font Premium dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo" onclick="tampilkanHalaman('home')">GB<span>Velocity</span></div>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home" class="nav-link active" onclick="tampilkanHalaman('home')">Home</a></li>
+                <li><a href="#" id="nav-mclaren" class="nav-link" onclick="tampilkanHalaman('mclaren')">McLaren</a></li>
+                <li><a href="#" id="nav-ferrari" class="nav-link" onclick="tampilkanHalaman('ferrari')">Ferrari</a></li>
+                <li><a href="#" id="nav-sale" class="nav-link" onclick="tampilkanHalaman('sale')">Special Offer</a></li>
+            </ul>
+        </nav>
+        <!-- Tombol Booking List / Keranjang Belanja -->
+        <div class="cart-icon" id="cartButton">
+            🛒 <span class="badge" id="cartBadge">0</span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero" id="hero-section">
+        <div class="hero-content">
+            <h1 id="hero-title">THE ULTIMATE SPEEDS</h1>
+            <p id="hero-desc">Rasakan sensasi berkendara jet darat dengan teknologi aerodinamis ekstrem dari McLaren atau kemewahan serta warisan balap legendaris dari Ferrari.</p>
+            <button class="btn-explore" onclick="tampilkanHalaman('mclaren')">Jelajahi Showroom</button>
+        </div>
+    </section>
+
+    <!-- UTAMA: KONTEN KATALOG MOBIL SUPER -->
+    <main class="container">
+        
+        <!-- ================= HALAMAN McLAREN ================= -->
+        <div id="page-mclaren" class="page-section">
+            <h2 class="brand-title mclaren-color">McLAREN HYPERCARS</h2>
+            <div class="product-grid">
+                
+                <!-- McLaren 720S -->
+                <div class="product-card mclaren-card">
+                    <div class="badge-status dynamic-badge">Super Series</div>
+                    <div class="img-box orange-tint">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ep1FnzISoyXwkzqAkNI1P87f6e2DslVR4A&s" alt="McLaren 720S Orange">
+                    </div>
+                    <div class="details">
+                        <h3>McLaren 720S Coupe</h3>
+                        <p class="category">4.0L V8 Twin-Turbo (Papaya Orange)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 14.500.0000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('McLaren 720S Coupe')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- McLaren P1 -->
+                <div class="product-card mclaren-card">
+                    <div class="badge-status dynamic-badge">Ultimate Series</div>
+                    <div class="img-box dark-tint">
+                        <img src="https://gtspirit.com/wp-content/uploads/2014/12/McLaren-P1-13.jpg" alt="McLaren P1 Yellow Black">
+                    </div>
+                    <div class="details">
+                        <h3>McLaren P1 Hybrid</h3>
+                        <p class="category">Hypercar Limited Edition (Volcano Yellow)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 38.000.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('McLaren P1 Hybrid')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- McLaren GT -->
+                <div class="product-card mclaren-card">
+                    <div class="badge-status dynamic-badge">Grand Tourer</div>
+                    <div class="img-box silver-tint">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4srYxnZ8UQoZTrIFftXJjwRNIDnZE4eLxgg&s" alt="McLaren GT Modern">
+                    </div>
+                    <div class="details">
+                        <h3>McLaren GT Luxe</h3>
+                        <p class="category">Daily Luxury Cruising (Blue)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 9.800.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('McLaren GT Luxe')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN FERRARI ================= -->
+        <div id="page-ferrari" class="page-section">
+            <h2 class="brand-title ferrari-color">FERRARI SCUDERIA</h2>
+            <div class="product-grid">
+                
+                <!-- Ferrari F8 Tributo -->
+                <div class="product-card ferrari-card">
+                    <div class="badge-status dynamic-badge">V8 Icon</div>
+                    <div class="img-box red-tint">
+                        <img src="https://imgcdn.oto.com/large/gallery/exterior/10/2214/ferrari-f8-tributo-front-angle-low-view-691778.jpg" alt="Ferrari Rosso Corsa">
+                    </div>
+                    <div class="details">
+                        <h3>Ferrari F8 Tributo</h3>
+                        <p class="category">Twin-Turbo V8 Masterpiece (Rosso Corsa Red)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 12.500.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('Ferrari F8 Tributo')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ferrari LaFerrari -->
+                <div class="product-card ferrari-card">
+                    <div class="badge-status dynamic-badge">Hypercar</div>
+                    <div class="img-box red-dark-tint">
+                        <img src="https://news.dupontregistry.com/cdn/shop/articles/2017-ferrari-laferrari-aperta-5400000-738866743_167296d6-a11a-48a8-877f-36745d4b58ec.jpg?v=1767091408" alt="LaFerrari Hypercar">
+                    </div>
+                    <div class="details">
+                        <h3>LaFerrari Aperta</h3>
+                        <p class="category">V12 Hybrid Racing Technology (Race Red)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 65.000.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('LaFerrari Aperta')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ferrari Roma -->
+                <div class="product-card ferrari-card">
+                    <div class="badge-status dynamic-badge">Dolce Vita</div>
+                    <div class="img-box blue-dark-tint">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGpDD-6eFERF_4u7FYBZ-mSricttvJcaEVw&s" alt="Ferrari Roma Clean">
+                    </div>
+                    <div class="details">
+                        <h3>Ferrari Roma Coupe</h3>
+                        <p class="category">Elegant Front-Engine V8 (Silver Metallic)</p>
+                        <div class="price-row">
+                            <span class="price">Rp 10.200.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('Ferrari Roma Coupe')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= HALAMAN SPECIAL OFFER ================= -->
+        <div id="page-sale" class="page-section">
+            <h2 class="brand-title sale-color">🔥 EX-DISPLAY SPECIAL OFFER ⚡</h2>
+            <div class="product-grid">
+                
+                <!-- Special 1: McLaren 570S Promo -->
+                <div class="product-card mclaren-card">
+                    <div class="badge-status sale-badge">SAVE 800 JUTA</div>
+                    <div class="img-box orange-dark-tint">
+                        <img src="https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/caradvice/private/89237e6a23fe3fc949f79befab83ce09">
+                    </div>
+                    <div class="details">
+                        <h3>McLaren 570S Track Pack</h3>
+                        <p class="category"><del>Rp 7.800.000.000</del> (Ex-Demo Showroom)</p>
+                        <div class="price-row">
+                            <span class="price sale-price">Rp 7.000.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('McLaren 570S Track Pack (Promo)')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special 2: Ferrari Portofino Promo -->
+                <div class="product-card ferrari-card">
+                    <div class="badge-status sale-badge">SAVE 1 MILIAR</div>
+                    <div class="img-box red-tint">
+                        <img src="https://images.bisnis.com/posts/2020/09/17/1292933/ferrari_portofinom_11.jpg" alt="Ferrari Portofino Convertible">
+                    </div>
+                    <div class="details">
+                        <h3>Ferrari Portofino M</h3>
+                        <p class="category"><del>Rp 11.000.000.000</del> (Mint Condition)</p>
+                        <div class="price-row">
+                            <span class="price sale-price">Rp 10.000.000.000</span>
+                            <button class="btn-buy" onclick="beliMobil('Ferrari Portofino M (Promo)')">Beli</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 GB Velocity Showroom. Seluruh hak cipta dilindungi.</p>
+        <div class="footer-links">
+            <span onclick="alert('Halaman Kebijakan Privasi')">Kelompok 7</span> | 
+            <span onclick="alert('Halaman Syarat & Ketentuan')">Anggota : Alek, Rifat, Peri</span>
+        </div>
+    </footer>
+
+    <!-- SISTEM ENGINE JAVASCRIPT DINAMIS -->
+    <script>
+        let jumlahBooking = 0;
+
+        function tampilkanHalaman(namaHalaman) {
+            const mclarenPage = document.getElementById('page-mclaren');
+            const ferrariPage = document.getElementById('page-ferrari');
+            const salePage = document.getElementById('page-sale');
+            const heroSection = document.getElementById('hero-section');
+            const heroTitle = document.getElementById('hero-title');
+            const heroDesc = document.getElementById('hero-desc');
+
+            // Hapus kelas active di navigasi menu
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+
+            if (namaHalaman === 'home') {
+                document.getElementById('nav-home').classList.add('active');
+                mclarenPage.style.display = 'block';
+                ferrariPage.style.display = 'block';
+                salePage.style.display = 'none'; 
+                heroSection.style.display = 'flex';
+                heroTitle.innerText = "THE ULTIMATE SPEEDS";
+                heroDesc.innerText = "Rasakan sensasi berkendara jet darat dengan teknologi aerodinamis ekstrem dari McLaren atau kemewahan serta warisan balap legendaris dari Ferrari.";
+            } 
+            else if (namaHalaman === 'mclaren') {
+                document.getElementById('nav-mclaren').classList.add('active');
+                mclarenPage.style.display = 'block';
+                ferrariPage.style.display = 'none';
+                salePage.style.display = 'none';
+                heroSection.style.display = 'none'; 
+            } 
+            else if (namaHalaman === 'ferrari') {
+                document.getElementById('nav-ferrari').classList.add('active');
+                mclarenPage.style.display = 'none';
+                ferrariPage.style.display = 'block';
+                salePage.style.display = 'none';
+                heroSection.style.display = 'none';
+            } 
+            else if (namaHalaman === 'sale') {
+                document.getElementById('nav-sale').classList.add('active');
+                mclarenPage.style.display = 'none';
+                ferrariPage.style.display = 'none';
+                salePage.style.display = 'block';
+                heroSection.style.display = 'flex';
+                heroTitle.innerHTML = "⚡ EXECUTIVE LIQUIDATION ⚡";
+                heroDesc.innerText = "Kesempatan langka memiliki mobil pameran (ex-display) bergaransi resmi dengan potongan harga khusus bulan ini.";
+            }
+            
+            // Gulung otomatis keatas saat ganti menu
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Fungsi Tombol Beli Mobil
+        function beliMobil(namaMobil) {
+            alert("Selamat! Anda sudah membeli sepatu ini " + namaMobil); 
+            jumlahBooking++;
+            document.getElementById('cartBadge').innerText = jumlahBooking;
+        }
+
+        // Cek isi list pembelian
+        document.getElementById('cartButton').addEventListener('click', function() {
+            if (jumlahBooking === 0) {
+                alert("Daftar pembelian kendaraan Anda masih kosong.");
+            } else {
+                alert("Anda memiliki " + jumlahBooking + " unit supercar di dalam daftar antrean pembelian.");
+            }
+        });
+
+        // Tampilkan halaman Beranda secara default
+        tampilkanHalaman('home');
+    </script>
+</body>
+</html>
